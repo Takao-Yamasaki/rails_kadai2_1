@@ -15,6 +15,11 @@ class UsersController < ApplicationController
         redirect_to action: :index
     end
     
+    #詳細表示のアクション
+    def show
+        @user = User.find(params[:id])
+    end
+
     #編集を行うためのアクション
     def edit
         @user = User.find(params[:id])
